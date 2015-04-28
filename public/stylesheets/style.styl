@@ -1,0 +1,112 @@
+@import "http://fonts.googleapis.com/css?family=Open+Sans:400,300.css"
+
+*
+    box-sizing: border-box
+
+html
+    -webkit-font-smoothing: antialiased
+
+body
+    & > *:not(.reveal-viewport)
+        font-family "Open Sans", Helvetica, sans-serif
+
+    h1, h2, h3, h4, h5, h6, ul, li
+        margin: 0
+        padding: 0
+
+    .clear
+        clear: both
+
+.speaker-view
+    .reveal-viewport
+        border-right: 1px solid rgba(0,0,0,0.2);
+        position: relative
+        width: 65%
+        height: 100%
+        top: 0
+        left: 0
+        padding: 6px
+        padding-right: 0
+
+    .upcoming-slide
+        z-index: 255
+        width: 35%
+        height: 40%
+        top: 0
+        right: 0
+        padding: 6px
+        display: block
+        position: absolute
+        background-color: #ffffff
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+
+        h3.label
+            position: absolute
+            top: 0
+            left: 0
+            padding: 8px
+            margin: 0
+            background: rgba(0,0,0,0.6)
+            color: #fff
+            font-size: 14px
+
+        .screen
+            display: -webkit-box
+            display: -webkit-flex
+            display: -ms-flexbox
+            display: flex
+            position: absolute
+            top: 6px
+            right: 6px
+            bottom: 6px
+            left: 6px
+            visibility: hidden
+            background-color: #eee
+
+    .speaker-controls
+        z-index: 255
+        width: 35%
+        height: 60%
+        bottom: 0
+        right: 0
+        padding-top: 0
+        font-size: 20px
+        display: block
+        position: absolute
+        background-color: #ffffff
+
+        .time
+            position: relative
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+            margin-bottom: 10px
+            padding-bottom: 20px
+            cursor: default
+            padding: 16px
+
+            .timer
+                float: left
+                width: 50%
+                font-size: 1.9em
+                display: block
+                margin-top: 5px
+                border-right: 1px solid rgba(0,0,0,0.2);
+
+                .light
+                    color: #bbbbbb
+
+                .label
+                    text-transform: uppercase
+                    font-weight: normal
+                    font-size: 0.7em
+                    color: #666
+
+            .clock
+                float: right
+                text-align: right
+                width: 50%
+                font-size: 1.9em
+                display: block
+                margin-top: 5px
+
+                .light
+                    color: #bbbbbb

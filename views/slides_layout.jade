@@ -1,0 +1,37 @@
+doctype html(lang='en')
+head
+    meta(charset='utf-8')
+    title Talks - Rémi Delhaye
+    meta(name='description', content='Presentation')
+    meta(name='author', content='Rémi Delhaye')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
+
+    include shared/reveal_css
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
+body
+    block content
+
+    include shared/reveal_js
+
+    script.
+        Reveal.initialize({
+            controls: false,
+            keyboard: false,
+            touch: false,
+            progress: false,
+            history: false,
+            center: true,
+            transition: 'slide',
+            dependencies: [
+              { src: '/javascripts/classList.js', condition: function() { return !document.body.classList; } },
+              { src: '/javascripts/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: '/javascripts/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: '/javascripts/reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: '/javascripts/reveal/plugin/zoom-js/zoom.js', async: true },
+              { src: '/javascripts/reveal/plugin/notes/notes.js', async: true }
+            ]
+        });
+

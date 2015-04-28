@@ -1,0 +1,23 @@
+extends admin_layout
+
+block content
+  .speaker-view
+    .reveal-viewport
+      include shared/slides
+
+    .upcoming-slide
+      h3.label Upcoming
+
+    .speaker-controls
+      .segment.time
+        h4.label Time
+        span.value.timer(data-tooltip='Click to reset')
+          span.light#hours 00:
+          span.light#minutes 00:
+          span.light#seconds 00
+        span.clock
+          span#hours-and-minutes 00:00
+          span.light#day-moment AM
+        .clear
+
+
